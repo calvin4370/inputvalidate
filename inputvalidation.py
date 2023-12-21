@@ -82,4 +82,4 @@ def test(prompt):
 
         return int(user_input)
 
-print(get_word("prompt: "))
+#print(get_word("prompt: "))
