@@ -1,2 +1,2 @@
 # inputvalidation
-Contains various functions to validate user input
+A Python library which contains various functions to validate user input
