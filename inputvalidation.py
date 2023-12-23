@@ -81,5 +81,3 @@ def test(prompt):
         user_input = input(prompt)
 
         return int(user_input)
-
-#print(get_word("prompt: "))
