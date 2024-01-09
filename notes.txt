@@ -1,0 +1,2 @@
+Test get_number:
+- whether it returns an input of data type int, float correctly respectively

@@ -6,8 +6,8 @@ def get_int(prompt, **kwargs):
     Repeats until an int is properly inputted, then returns the int
 
     **kwargs:
-    min: Set min int acceptable
-    max: Set max int acceptable
+    min: Set min value acceptable
+    max: Set max value acceptable
     """
     while True:
         user_input = input(prompt)
@@ -33,6 +33,76 @@ def get_int(prompt, **kwargs):
                 else:
                     return user_input
 
+
+def get_float(prompt, **kwargs):
+    '''
+    Prompts user for an input, expecting a float
+    Repeats until an float is properly inputted, then returns the float
+
+    **kwargs:
+    min: Set min value acceptable
+    max: Set max value acceptable
+    '''
+    while True:
+        user_input = input(prompt)
+
+        if re.search(r"\d", user_input):
+            try:
+                user_input = float(user_input)
+            except ValueError:
+                pass
+            else:
+                if kwargs:
+                    if kwargs.get('min', 0):
+                        if user_input >= kwargs['min']:
+                            return user_input
+                        else:
+                            continue
+                    
+                    if kwargs.get('max', 0):
+                        if user_input <= kwargs['max']:
+                            return user_input
+                        else:
+                            continue
+                else:
+                    return user_input
+
+
+def get_number(prompt, **kwargs):
+    '''
+    Prompts user for an input, expecting a number
+    Returns an int or float depending on the number inputted
+    Repeats until an number is properly inputted, then returns the number
+
+    **kwargs:
+    min: Set min value acceptable
+    max: Set max value acceptable
+    '''
+    while True:
+        user_input = input(prompt)
+
+        if re.search(r"\d", user_input):
+            try:
+                check_type = [int(user_input), float(user_input)]
+            except ValueError:
+                pass
+            else:
+                if kwargs:
+                    if kwargs.get('min', 0):
+                        if user_input >= kwargs['min']:
+                            return user_input
+                        else:
+                            continue
+                    
+                    if kwargs.get('max', 0):
+                        if user_input <= kwargs['max']:
+                            return user_input
+                        else:
+                            continue
+                else:
+                    return user_input
+
+
 def get_string(prompt):
     """
     Prompts user for an input, expecting a string
@@ -43,6 +113,7 @@ def get_string(prompt):
             return str(input(prompt))
         except:
             pass
+
 
 def get_bool(prompt):
     """
@@ -57,6 +128,7 @@ def get_bool(prompt):
         elif user_input.title() == 'False':
             return False
 
+
 def get_yn(prompt):
     """
     Prompts user for a yes/no answer
@@ -70,6 +142,7 @@ def get_yn(prompt):
         elif user_input[0].lower() == 'n':
             return 'n'
 
+
 def get_tf(prompt):
     """
     Prompts user for a True/False answer
@@ -82,6 +155,7 @@ def get_tf(prompt):
             return True
         elif user_input[0].lower() == 'f':
             return False
+
 
 def get_word(prompt):
     """
