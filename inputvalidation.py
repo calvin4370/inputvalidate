@@ -1,18 +1,37 @@
 import re
 
-def get_int(prompt):
+def get_int(prompt, **kwargs):
     """
     Prompts user for an input, expecting an int
     Repeats until an int is properly inputted, then returns the int
+
+    **kwargs:
+    min: Set min int acceptable
+    max: Set max int acceptable
     """
     while True:
         user_input = input(prompt)
 
         if re.search(r"\d", user_input):
             try:
-                return int(user_input)
+                user_input = int(user_input)
             except ValueError:
                 pass
+            else:
+                if kwargs:
+                    if kwargs.get('min', 0):
+                        if user_input >= kwargs['min']:
+                            return user_input
+                        else:
+                            continue
+                    
+                    if kwargs.get('max', 0):
+                        if user_input <= kwargs['max']:
+                            return user_input
+                        else:
+                            continue
+                else:
+                    return user_input
 
 def get_string(prompt):
     """
