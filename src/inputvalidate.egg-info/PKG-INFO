@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: inputvalidate
+Version: 0.1.0
+Summary: A Python Library with various functions to validate user input
+Home-page: https://github.com/calvin4370/inputvalidate
+Author: Calvin Chan
+Author-email: calvinchan4370z@gmail.com
+Project-URL: Bug Tracker, https://github.com/calvin4370/inputvalidate/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# inputvalidate
+A Python library which contains various functions to validate user input
+
+inputvalidation.py
+- is the main module containing the various input validation functions
+
+Functions:
+    get_int(prompt, **kwargs)
+        - Prompts user for an input, expecting an int
+        - Repeats until proper input received
+        kwargs:
+            min: minimum value acceptable
+            max: maximum value acceptable
