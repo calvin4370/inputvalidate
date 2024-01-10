@@ -1,2 +1,9 @@
 Test get_number:
 - whether it returns an input of data type int, float correctly respectively
+
+To update:
+run
+"python -m build" to update dist
+"python -m twine upload dist/*" to upload dist to PyPi
+
+"python -m twine upload --repository testpypi dist/*" is for test server
