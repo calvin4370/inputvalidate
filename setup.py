@@ -1,7 +1,9 @@
-from setuptools import setup
+from setuptools import setup, find_packages
 
 setup(
-    version='0.1.2'
+    packages=find_packages(
+        where='src'
+    )
 )
 
 '''Below was the setup.cfg'''
@@ -22,10 +24,8 @@ setup(
 #     Operating System :: OS Independent
 
 # [options]
-# package_dir =
-#     = src
-# packages = find:
-# python_requires = >=3.6
+# packages = find: # OR `find_namespace:` if you want to use namespaces
 
-# [options.packages.find]
-# where = src
+# [options.packages.find]  # (always `find` even if `find_namespace:` was used before)
+# # This section is optional as well as each of the following options:
+# where=src  # . by default

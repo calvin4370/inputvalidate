@@ -12,24 +12,30 @@ def get_int(prompt, **kwargs):
     while True:
         user_input = input(prompt)
 
+        # if input contains digits
         if re.search(r"\d", user_input):
+            # Try converting the string type input into an int
             try:
                 user_input = int(user_input)
+            # Having '.', or anything other than digits in the string type input will throw an exception
             except ValueError:
-                pass
+                continue
             else:
                 if kwargs:
-                    if kwargs.get('min', 0):
-                        if user_input >= kwargs['min']:
-                            return user_input
+                    if 'min' in kwargs:
+                        if user_input >= float(kwargs['min']):
+                            pass
                         else:
                             continue
                     
-                    if kwargs.get('max', 0):
-                        if user_input <= kwargs['max']:
-                            return user_input
+                    if 'max' in kwargs:
+                        if user_input <= float(kwargs['max']):
+                            pass
                         else:
                             continue
+                    
+                    return user_input
+                
                 else:
                     return user_input
 
@@ -46,24 +52,30 @@ def get_float(prompt, **kwargs):
     while True:
         user_input = input(prompt)
 
+        # if input contains digits
         if re.search(r"\d", user_input):
+            # Try converting the string type input into an int
             try:
                 user_input = float(user_input)
+            # Having anything other than digits or at most 1 '.' in the string type input will throw an exception
             except ValueError:
-                pass
+                continue
             else:
                 if kwargs:
-                    if kwargs.get('min', 0):
-                        if user_input >= kwargs['min']:
-                            return user_input
+                    if 'min' in kwargs:
+                        if user_input >= float(kwargs['min']):
+                            pass
                         else:
                             continue
                     
-                    if kwargs.get('max', 0):
-                        if user_input <= kwargs['max']:
-                            return user_input
+                    if 'max' in kwargs:
+                        if user_input <= float(kwargs['max']):
+                            pass
                         else:
                             continue
+                    
+                    return user_input
+                
                 else:
                     return user_input
 
@@ -81,38 +93,77 @@ def get_number(prompt, **kwargs):
     while True:
         user_input = input(prompt)
 
+        # Check if input contains digits
         if re.search(r"\d", user_input):
+            # Determine if it is an int or float
             try:
-                check_type = [int(user_input), float(user_input)]
+                user_input = int(user_input)
+
             except ValueError:
-                pass
-            else:
+                # Input may be a float
+                try:
+                    user_input = float(user_input)
+                except ValueError:
+                    # Input is neither an int nor float
+                    continue
+
+            finally:
                 if kwargs:
-                    if kwargs.get('min', 0):
-                        if user_input >= kwargs['min']:
-                            return user_input
+                    if 'min' in kwargs:
+                        if float(user_input) >= float(kwargs['min']):
+                            pass
                         else:
                             continue
                     
-                    if kwargs.get('max', 0):
-                        if user_input <= kwargs['max']:
-                            return user_input
+                    if 'max' in kwargs:
+                        if float(user_input) <= float(kwargs['max']):
+                            pass
                         else:
                             continue
+                    
+                    return user_input
+                
                 else:
                     return user_input
 
 
-def get_string(prompt):
+def get_string(prompt, **kwargs):
     """
     Prompts user for an input, expecting a string
     Repeats until an string is properly inputted, then returns the string
+
+    **kwargs:
+    min: Set min length acceptable
+    max: Set max length acceptable
+    nospace: Set to True if input must contain no spaces. Default: False
     """
     while True:
         try:
-            return str(input(prompt))
-        except:
-            pass
+            user_input = str(input(prompt))
+        except ValueError:
+            continue
+        else:
+            if kwargs:
+                if 'min' in kwargs:
+                    if len(user_input) >= float(kwargs['min']):
+                        pass
+                    else:
+                        continue
+                
+                if 'max' in kwargs:
+                    if len(user_input) <= float(kwargs['max']):
+                        pass
+                    else:
+                        continue
+                
+                if 'nospace' in kwargs:
+                    if kwargs['nospace'] and ' ' in user_input:
+                        continue
+                
+                return user_input
+            
+            else:
+                return user_input
 
 
 def get_bool(prompt):
@@ -129,7 +180,7 @@ def get_bool(prompt):
             return False
 
 
-def get_yn(prompt):
+def get_yesno(prompt):
     """
     Prompts user for a yes/no answer
     Repeats until the first letter of the input is y/n, ignoring caps, then returns 'y' / 'n'
@@ -145,7 +196,7 @@ def get_yn(prompt):
 
 def get_tf(prompt):
     """
-    Prompts user for a True/False answer
+    Prompts user for a True/False answer given as t/f
     Repeats until the first letter of the input is t/f, ignoring caps, then returns True or False
     """
     while True:
@@ -169,8 +220,11 @@ def get_word(prompt):
             return user_input
 
 
-def test(prompt):
-    while True:
-        user_input = input(prompt)
+# def test(prompt):
+#     """
+#     Test function
+#     """
+#     while True:
+#         user_input = input(prompt)
 
-        return int(user_input)
+#         return int(user_input)

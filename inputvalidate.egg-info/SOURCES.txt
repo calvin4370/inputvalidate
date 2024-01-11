@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+inputvalidate.egg-info/PKG-INFO
+inputvalidate.egg-info/SOURCES.txt
+inputvalidate.egg-info/dependency_links.txt
+inputvalidate.egg-info/top_level.txt
+src/__init__.py
+src/inputvalidate.py
