@@ -40,8 +40,7 @@ $ |
 # Functions
 <!-- <button>Open all</button> -->
 <!-- get_int -->
-<details>
-<summary><h3>get_int</h3></summary>
+## get_int
 
 ```python
 get_int(prompt, **kwargs)
@@ -51,12 +50,10 @@ Prompts user for an input, expecting an int. Repeats until an int is properly in
 ### *kwargs:*
 - **min**: Set min value acceptable
 - **max**: Set max value acceptable
-</details>
 
 
 <!-- get_float -->
-<details>
-<summary><h3>get_float</h3></summary>
+## get_float
 
 ```python
 get_float(prompt, **kwargs)
@@ -66,12 +63,10 @@ Prompts user for an input, expecting a float. Repeats until a number is properly
 ### *kwargs:*
 - **min**: Set min value acceptable
 - **max**: Set max value acceptable
-</details>
 
 
 <!-- get_number -->
-<details>
-<summary><h3>get_number</h3></summary>
+## get_number
 
 ```python
 get_number(prompt, **kwargs)
@@ -81,12 +76,10 @@ Prompts user for a number. Repeats until a number is properly inputted, then ret
 ### *kwargs:*
 - **min**: Set min value acceptable
 - **max**: Set max value acceptable
-</details>
 
 
 <!-- get_string -->
-<details>
-<summary><h3>get_string</h3></summary>
+## get_string
 
 ```python
 get_string(prompt, **kwargs)
@@ -97,23 +90,19 @@ Prompts user for an input, expecting a string. Repeats until an string is proper
 - **min**: Set min length acceptable
 - **max**: Set max length acceptable
 - **nospace**: Set to True if input must contain no spaces. Default: False
-</details>
 
 
 <!-- get_bool -->
-<details>
-<summary><h3>get_bool</h3></summary>
+## get_bool
 
 ```python
 get_bool(prompt)
 ```
 Prompts user for a True/False answer. Repeats until user inputs True or False, ignoring caps, then returns True or False
-</details>
 
 
 <!-- get_yesno -->
-<details>
-<summary><h3>get_yesno</h3></summary>
+## get_yesno
 
 ```python
 get_yesno(prompt)
@@ -122,37 +111,30 @@ Prompts user for a yes/no answer. Repeats until the first letter of the input is
 
 ### *Aliases*:
 - get_yn
-</details>
 
 
 <!-- get_tf -->
-<details>
-<summary><h3>get_tf</h3></summary>
+## get_tf
 
 ```python
 get_tf(prompt)
 ```
 Prompts user for a t/f answer. Repeats until the first letter of the input is t/f, ignoring caps, then returns 't' / 'f'
-</details>
 
 
 <!-- get_word -->
-<details>
-<summary><h3>get_word</h3></summary>
+## get_word
 
 ```python
 get_word(prompt)
 ```
 Prompts user for a single word of only alphabet letters. Repeats until a word is properly inputted, then returns the word as a string
-</details>
 
 
 <!-- get_char -->
-<details>
-<summary><h3>get_word</h3></summary>
+## get_char
 
 ```python
 get_char(prompt)
 ```
 Prompts user for a single ASCII character. Repeats until a character is properly inputted, then returns the char as a string
-</details>
