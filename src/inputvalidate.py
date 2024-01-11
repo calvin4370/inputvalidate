@@ -220,6 +220,34 @@ def get_word(prompt):
             return user_input
 
 
+def get_char(prompt):
+    """
+    Prompts user for a single ASCII character
+    Repeats until a character is properly inputted, then returns the char as a string
+    """
+    while True:
+        user_input = input(prompt)
+
+        if user_input.isascii() and len(user_input) == 1:
+            return user_input
+
+
+# Aliases
+def get_yn(prompt):
+    """
+    Prompts user for a yes/no answer
+    Repeats until the first letter of the input is y/n, ignoring caps, then returns 'y' / 'n'
+    """
+    while True:
+        user_input = input(prompt)
+
+        if user_input[0].lower() == 'y':
+            return 'y'
+        elif user_input[0].lower() == 'n':
+            return 'n'
+
+
+
 # def test(prompt):
 #     """
 #     Test function

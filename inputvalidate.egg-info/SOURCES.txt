@@ -8,3 +8,4 @@ inputvalidate.egg-info/dependency_links.txt
 inputvalidate.egg-info/top_level.txt
 src/__init__.py
 src/inputvalidate.py
+tests/test.py

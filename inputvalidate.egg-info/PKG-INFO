@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
 Name: inputvalidate
-Version: 0.1.3
+Version: 0.1.4
 Summary: A Python Library with various functions to validate user input
 Author-email: Calvin Chan <calvinchan4370z@gmail.com>
 License: MIT License
