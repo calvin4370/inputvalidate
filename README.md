@@ -8,14 +8,14 @@
 <!--sponser me-->
 <!--another badge-->
 
-Do you always find yourself having to write extra code every project to validate the input given by a user? Then use inputvalidate! 
-A Python package containing various functions to validate user input.
+Do you always find yourself having to write extra code every project to validate the input given by users? Then use inputvalidate -
+a Python package containing various functions to validate user input.
 
-Calvin Chan calvinchan4370z@gmail.com MIT License
+Calvin Chan  calvinchan4370z@gmail.com  MIT License
 
 </br>
 
-## Example Usage
+# Example Usage
 Code:
 ```python
 from inputvalidate import get_int
@@ -38,8 +38,7 @@ $ |
 <!-- # Documentation -->
 
 # Functions
-<button>Open all</button>
-
+<!-- <button>Open all</button> -->
 <!-- get_int -->
 <details>
 <summary><h3>get_int</h3></summary>
