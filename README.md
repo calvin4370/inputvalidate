@@ -42,7 +42,6 @@ $ |
 <!-- get_int -->
 <details>
 <summary><h3>get_int</h3></summary>
-
 ```python
 get_int(prompt, **kwargs)
 ```
@@ -57,7 +56,6 @@ Prompts user for an input, expecting an int. Repeats until an int is properly in
 <!-- get_float -->
 <details>
 <summary><h3>get_float</h3></summary>
-
 ```python
 get_float(prompt, **kwargs)
 ```
@@ -72,7 +70,6 @@ Prompts user for an input, expecting a float. Repeats until a number is properly
 <!-- get_number -->
 <details>
 <summary><h3>get_number</h3></summary>
-
 ```python
 get_number(prompt, **kwargs)
 ```
@@ -87,7 +84,6 @@ Prompts user for a number. Repeats until a number is properly inputted, then ret
 <!-- get_string -->
 <details>
 <summary><h3>get_string</h3></summary>
-
 ```python
 get_string(prompt, **kwargs)
 ```
@@ -103,7 +99,6 @@ Prompts user for an input, expecting a string. Repeats until an string is proper
 <!-- get_bool -->
 <details>
 <summary><h3>get_bool</h3></summary>
-
 ```python
 get_bool(prompt)
 ```
@@ -114,7 +109,6 @@ Prompts user for a True/False answer. Repeats until user inputs True or False, i
 <!-- get_yesno -->
 <details>
 <summary><h3>get_yesno</h3></summary>
-
 ```python
 get_yesno(prompt)
 ```
@@ -128,7 +122,6 @@ Prompts user for a yes/no answer. Repeats until the first letter of the input is
 <!-- get_tf -->
 <details>
 <summary><h3>get_tf</h3></summary>
-
 ```python
 get_tf(prompt)
 ```
@@ -139,7 +132,6 @@ Prompts user for a t/f answer. Repeats until the first letter of the input is t/
 <!-- get_word -->
 <details>
 <summary><h3>get_word</h3></summary>
-
 ```python
 get_word(prompt)
 ```
@@ -150,7 +142,6 @@ Prompts user for a single word of only alphabet letters. Repeats until a word is
 <!-- get_char -->
 <details>
 <summary><h3>get_word</h3></summary>
-
 ```python
 get_char(prompt)
 ```
