@@ -4,3 +4,28 @@ requires = [
     "wheel"
 ]
 build-backend = "setuptools.build_meta"
+
+[project]
+name = "inputvalidate"
+version = "0.1.1"
+authors = [
+  { name="Calvin Chan", email="calvinchan4370z@gmail.com" },
+]
+description = "A Python Library with various functions to validate user input"
+readme = "README.md"
+license = { file = "LICENSE" }
+requires-python = ">=3.6"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+keywords = [
+    "User Input Validation"
+]
+
+[project.urls]
+Homepage = "https://github.com/calvin4370/inputvalidate"
+GitHub = "https://github.com/calvin4370/inputvalidate"
+Issues = "https://github.com/calvin4370/inputvalidate/issues"
+Changelog = "https://github.com/calvin4370/inputvalidate/CHANGELOG.md"
