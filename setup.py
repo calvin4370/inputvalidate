@@ -1,13 +1,15 @@
 from setuptools import setup, find_packages
 
 setup(
-    packages=['src/inputvalidate']
+    packages=find_packages(
+        
+    )
 )
 
 '''Below was the setup.cfg'''
 # [metadata]
 # name = inputvalidate
-# version = 0.1.0
+# version = 0.1.2
 # author = Calvin Chan
 # author_email = calvinchan4370z@gmail.com
 # description = A Python Library with various functions to validate user input
@@ -22,8 +24,9 @@ setup(
 #     Operating System :: OS Independent
 
 # [options]
-# packages = find: # OR `find_namespace:` if you want to use namespaces
+# package_dir=
+#     =src
+# packages=find:
 
-# [options.packages.find]  # (always `find` even if `find_namespace:` was used before)
-# # This section is optional as well as each of the following options:
+# [options.packages.find]
 # where=src  # . by default

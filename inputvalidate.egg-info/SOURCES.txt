@@ -2,12 +2,10 @@ LICENSE
 README.md
 pyproject.toml
 setup.py
+inputvalidate/__init__.py
+inputvalidate/inputvalidate.py
 inputvalidate.egg-info/PKG-INFO
 inputvalidate.egg-info/SOURCES.txt
 inputvalidate.egg-info/dependency_links.txt
 inputvalidate.egg-info/top_level.txt
-src/inputvalidate/__init__.py
-src/inputvalidate/inputvalidate.py
-src/inputvalidate/__init__.py
-src/inputvalidate/inputvalidate.py
 tests/test.py

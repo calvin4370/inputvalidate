@@ -7,3 +7,14 @@ run
 "python -m twine upload dist/*" to upload dist to PyPi
 
 "python -m twine upload --repository testpypi dist/*" is for test server
+
+old setup.py,
+from setuptools import setup, find_packages
+
+setup(
+    packages=find_packages(
+        where='src*'
+    )
+)
+
+'''Below was the setup.cfg'''
