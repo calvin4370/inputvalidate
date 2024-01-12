@@ -8,4 +8,3 @@ inputvalidate.egg-info/PKG-INFO
 inputvalidate.egg-info/SOURCES.txt
 inputvalidate.egg-info/dependency_links.txt
 inputvalidate.egg-info/top_level.txt
-tests/test.py
