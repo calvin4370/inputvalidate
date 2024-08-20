@@ -13,6 +13,11 @@ a Python package containing various functions to validate user input.
 
 Calvin Chan  calvinchan4370z@gmail.com  MIT License
 
+hosted on PyPi
+```sh
+pip install inputvalidate
+```
+
 </br>
 
 # Example Usage
